@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Card, CardItem, Text, Icon, Right, Button } from 'native-base';
-import Login from './components/Login';
+import { RootStack } from './router';
 export default class App extends Component {
   render() {
-    return (
-      <Login />
-    );
+    return <RootStack />;
   }
 }

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Card, CardItem, Text, Icon, Right, Button, View} from 'native-base';
-import { Col, Row, Grid } from 'react-native-easy-grid';
+
+import { StackNavigator } from 'react-navigation';
+
 export default class Login extends Component {
     render() {
         return (
             <Container>
-                <Header />
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#ff0000' }}>
-                    <Button iconRight light>
-                        <Text>Home</Text>
-                        <Icon name='arrow-forward' />
-                    </Button>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text style={{ marginBottom: 20 }} >Login page</Text>
+                    <View>
+                        <Button iconRight onPress={() => this.props.navigation.navigate('Home')}>
+                            <Text>Home</Text>
+                            <Icon name='home' />
+                        </Button>
+                    </View>
                 </View>
             </Container>
         );
